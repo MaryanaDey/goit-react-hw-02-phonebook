@@ -1,8 +1,9 @@
 import React from 'react';
 
 import Form from './components/Form';
-//import ContactList from './components/ContactList';
 import SearchContact from './components/SearchContact';
+import ContactList from './components/ContactList';
+import s from './components/Phone.module.css';
 
 export default class Mobile extends React.Component {
   state = {
@@ -46,15 +47,12 @@ export default class Mobile extends React.Component {
     const filterContact = this.getFilter();
 
     return (
-      <div>
-        <h1>Phoneboock</h1>
-        <Form />
-        <h2>Contacts</h2>
-        <SearchContact />
-        {/* <ContactList
-          contactList={filterContact}
-          onDeleted={this.deletedContact}
-           /> */}
+      <div className={s.container}>
+        <h1 className={s.headingForm}>Phoneboock</h1>
+        <Form onSubmit={this.addContact} contactList={this.checkName} />
+        <h2 className={s.contactList}>Contacts</h2>
+        <SearchContact value={this.state.filter} SearchContact={this.veluesFilter} />
+        <ContactList contactList={filterContact} onDeleted={this.deletedContact} />
       </div>
     );
   }
