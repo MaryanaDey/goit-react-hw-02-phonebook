@@ -38,34 +38,39 @@ export default class Form extends Component {
   render() {
     const idName = shortid.generate();
     const idNumber = shortid.generate();
+    const { name, number } = this.state;
 
     return (
       <form className={s.form} onSubmit={this.addContact}>
         <label htmlFor={idName} className={s.labelName}>
-          {' '}
           Name
         </label>
         <input
           id={idName}
           type="text"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           name="name"
-          value={this.state.name}
-          onChange={this.InputValues}
+          value={name}
+          placeholder="Name"
+          onChange={this.InputValue}
           autoComplete="off"
-        ></input>
+        />
+
         <label htmlFor={idNumber} className={s.labelNumber}>
-          {' '}
           Number
         </label>
+
         <input
           id={idNumber}
-          type="tel"
+          type="number"
           pattern="^[ 0-9]+$"
           name="number"
-          value={this.state.number}
-          onChange={this.InputValues}
+          value={number}
+          placeholder="Number"
+          onChange={this.InputValue}
           autoComplete="off"
-        ></input>
+        />
+
         <button type="submite" className={s.btnForm}>
           Add contact
         </button>

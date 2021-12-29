@@ -29,7 +29,7 @@
 }
 
 input:focus {
-  outline-color: rgb(201, 151, 57);
+  outline-color: rgb(78, 220, 245);
 }
 
 .btnForm {
@@ -42,10 +42,10 @@ input:focus {
   outline: none;
 }
 .btnForm:hover {
-  background-color: rgb(201, 151, 57);
+  background-color: rgb(78, 220, 245);
 }
 .btnForm:focus {
-  background-color: rgb(201, 151, 57);
+  background-color: rgb(78, 220, 245);
 }
 
 .containerSearch {
@@ -73,19 +73,18 @@ li {
 }
 .btnList {
   min-width: 120px;
-  background-color: rgb(201, 67, 57);
+  background-color: rgb(255, 255, 255);
   margin-left: 10px;
-  border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   outline: none;
 }
 .btnList:hover {
   color: black;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(201, 67, 57);
+  background-color: rgb(78, 220, 245);
+  border: 1px solid rgb(78, 220, 245);
 }
 .btnList:focus {
   color: black;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(201, 67, 57);
+  background-color: rgb(78, 220, 245);
+  border: 1px solid rgb(78, 220, 245);
 }
